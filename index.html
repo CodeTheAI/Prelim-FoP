@@ -76,15 +76,11 @@
 
     # Function to calculate the class standing
     def calculate_class_standing(quiz_score, requirements_grade, recitation_score):
-        if not (1 <= quiz_score <= 100) or not (1 <= requirements_grade <= 100) or not (1 <= recitation_score <= 100):
-            raise ValueError("Scores must be between 1 and 100")
         class_standing = (quiz_score * 0.40) + (requirements_grade * 0.30) + (recitation_score * 0.30)
         return class_standing
     
     # Function to calculate the prelim grade
     def calculate_prelim_grade(attendance_absences, quiz_score, requirements_grade, recitation_score, prelim_exam_score):
-        if not (1 <= prelim_exam_score <= 100):    
-            raise ValueError("Invalid input. Scores must be between 1 and 100.")
         attendance_score = calculate_attendance_grade(attendance_absences)
         if isinstance(attendance_score, str):
             return attendance_score, None
