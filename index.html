@@ -128,8 +128,8 @@
             prelim_exam_score = float(prelim_exam_score)
             
             
-            # Validate inputs (0 < , 1-100)
-            if not (0 <= attendance_absences) or not (1 <= quiz_score <= 100) or not (1 <= requirements_grade <= 100) or not (1 <= recitation_score <= 100) or not (1 <= prelim_exam_score <= 100):
+            # Validate inputs (0-100)
+            if not (0 <= attendance_absences <= 100) or not (0 <= quiz_score <= 100) or not (0 <= requirements_grade <= 100) or not (0 <= recitation_score <= 100) or not (0 <= prelim_exam_score <= 100):
                 raise ValueError("Input must not go above the specified range")
             
             # Shows the prelim grade
