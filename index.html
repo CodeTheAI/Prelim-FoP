@@ -8,7 +8,7 @@
         function checkAttendance() {
         // Get the number of absences and check if it is greater than or equal to 4 (4 is the maximum number of absences allowed)
         const attendance_absences = parseInt(document.getElementById('attendance_absences').value);
-        // Set the result text to "FAILED" if the number of absences is greater than or equal to 4
+        // Set the result text to "FAILED" if the number of absences is greater than or equal to 4.
         const result = attendance_absences >= 4 ? "FAILED" : "";
         // Set the result text in the HTML
         document.getElementById('result').textContent = result;
